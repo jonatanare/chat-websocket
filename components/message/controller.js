@@ -1,6 +1,5 @@
 const store = require('./store')
 
-
 function addMessage(user, message) {
 
     return new Promise((resolve, reject) => {

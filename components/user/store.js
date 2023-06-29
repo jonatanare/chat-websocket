@@ -5,6 +5,12 @@ function addUser(user) {
     return myUser.save()
 }
 
+async function getAllUsers() {
+    const users = await Model.find({})
+    return users;
+}
+
 module.exports = {
-    add: addUser
+    add: addUser,
+    getAllUsers
 }
