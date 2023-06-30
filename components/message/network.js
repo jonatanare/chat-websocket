@@ -4,7 +4,7 @@ const controller = require('./controller')
 const router = express.Router()
 
 router.get('/', function(req, resp) {
-    const filterMessages = req.query.user || null
+    const filterMessages = req.query.chat || null
     controller.getMessages(filterMessages)
     .then((messages) => {
         response.success(req, resp, messages, 200)
@@ -15,7 +15,7 @@ router.get('/', function(req, resp) {
 })
 
 router.post('/', function(req, resp) {
-    controller.addMessage(req.body.user, req.body.message)
+    controller.addMessage(req.body.chat, req.body.user, req.body.message)
 
     .then((fullMessage) => {
         response.success(req, resp, fullMessage, 200)
