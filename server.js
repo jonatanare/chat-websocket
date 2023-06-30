@@ -1,6 +1,5 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-// const router = require('./components/message/network')
 
 require('dotenv').config()
 
